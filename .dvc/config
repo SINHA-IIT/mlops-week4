@@ -1,5 +1,7 @@
 [core]
-    remote = gcsremote
+    remote = myremote
 ['remote "gcsremote"']
     url = gs://mlops-course-swift-yew-472812-c6-week1
     credentialpath = /home/sinhaabhinashkumar/.config/gcloud/application_default_credentials.json
+['remote "myremote"']
+    url = https://github.com/SINHA-IIT/mlops-week4.git
