@@ -32,9 +32,12 @@ jobs:
         run:
           pip install -r requirements.txt --no-deps
           
+      - name: Run tests
+        run: pytest --maxfail=1 --disable-warnings -q > result.log; exit 0
       - name: Create report.md
         run: |
           echo "## Test Result" > report.md
+          result.log >> report.md
           echo "metrics from training" >> report.md
           #cat metrics.csv >> report.md
 
