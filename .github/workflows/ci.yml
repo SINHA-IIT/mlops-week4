@@ -20,8 +20,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install dvc[s3]    # Use appropriate extra if you use s3/gcs/azure/etc
-          pip install pytest
 
       - name: Sanity Report with CML
         env:
