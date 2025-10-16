@@ -35,7 +35,6 @@ jobs:
       - name: Create report.md
         run: |
           echo "## Test Result" > report.md
-          tail -n 20 result.log >> report.md
           echo "metrics from training" >> report.md
           cat metrics.csv >> report.md
 
