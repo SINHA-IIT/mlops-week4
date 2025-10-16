@@ -3,5 +3,4 @@ pandas
 scikit-learn
 joblib
 pytest
-dvc[s3]
 cml
