@@ -31,6 +31,17 @@ jobs:
       - name: Install requirement
         run:
           pip install -r requirements.txt --no-deps
+      - name: Upload test result log
+        uses: actions/upload-artifact@v3
+        with:
+          name: result-log
+          path: result.log
+
+      - name: Upload report file
+        uses: actions/upload-artifact@v3
+        with:
+          name: report-md
+          path: report.md
 
       #- name: Sanity Report with CML
       #  env:
