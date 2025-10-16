@@ -39,7 +39,7 @@ jobs:
       - name: Create report.md
         run: |
           echo "## Test Result" > report.md
-          result.log >> report.md
+          cat result.log >> report.md
           echo "metrics from training" >> report.md
           #cat metrics.csv >> report.md
 
