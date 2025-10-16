@@ -42,6 +42,9 @@ jobs:
           cat result.log >> report.md
           echo "metrics from training" >> report.md
           #cat metrics.csv >> report.md
+      - name: Print report.md content
+        run: cat report.md
+
 
       #- name: Sanity Report with CML
       #  env:
