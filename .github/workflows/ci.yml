@@ -35,7 +35,7 @@ jobs:
       - name: Install pytest
         run: pip install pytest
       - name: Run tests
-        run: pytest test.py --maxfail=1 --disable-warnings -v || true
+        run: pytest test.py --maxfail=1 --disable-warnings -v > result.log || true
       - name: Create report.md
         run: |
           echo "## Test Result" > report.md
