@@ -32,13 +32,13 @@ jobs:
         run:
           pip install -r requirements.txt --no-deps
 
-      - name: Sanity Report with CML
-        env:
-          REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          pip install cml
-          echo "## Test Result" > report.md
-          tail -n 20 result.log >> report.md
-          echo "metrics from training" >> report.md
-          cat metrics.csv >> report.md
-          cml comment create --publish report.md
+      #- name: Sanity Report with CML
+      #  env:
+       #   REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       # run: |
+       #   pip install cml
+        #  echo "## Test Result" > report.md
+        #  tail -n 20 result.log >> report.md
+         # echo "metrics from training" >> report.md
+         # cat metrics.csv >> report.md
+         # cml comment create --publish report.md
