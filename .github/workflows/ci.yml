@@ -41,9 +41,11 @@ jobs:
           echo "## Test Result" > report.md
           cat result.log >> report.md
           echo "metrics from training" >> report.md
-          #cat metrics.csv >> report.md
+          cat metrics.csv >> report.md
       - name: Print report.md content
         run: cat report.md
+      - name: Copy report.md to report.txt
+        run: cp report.md report.txt
 
 
       #- name: Sanity Report with CML
