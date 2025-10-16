@@ -1,4 +1,4 @@
-name: CI Pipeline
+name: Sanity test
 
 on:
   workflow_dispatch:
